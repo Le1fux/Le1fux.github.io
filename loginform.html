@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Login</title>
+    <script src="js/login.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Talk Blueprint</div>
+    </header>
+
+    <main class="login-container">
+        <!-- Login Form -->
+        <div id="login-form">
+            <h1>Login to Your Account</h1>
+            <div id="message-container"></div> <!-- Container for messages -->
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button class="login-button">Login</button>
+            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+        </div>
+
+        <!-- Sign-Up Form -->
+        <div id="signup-form" style="display: none;">
+            <h1>Create a New Account</h1>
+            <div id="message-container-signup"></div> <!-- Container for signup messages -->
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button class="signup-button">Sign Up</button>
+            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+
+        <div id="form">
+            <h2>Complete the form below to begin your free trial.</h2>
+            <form class="form-grid"><!--Start form-->
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <label for="fName">First Name:</label> 
+                    <input type="text" id="fName" name="fName" required />
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="phone">Phone:</label> 
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <label for="customer-password">Password:</label>
+                    <input type="password" id="customer-password" name="customer-password" required />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Service Information</legend>
+                    <label for="service">Service Type:</label>
+                    <select id="service" name="service">
+                        <option value="service1">Service 1</option>
+                        <option value="service2">Service 2</option>
+                        <option value="service3">Service 3</option>
+                    </select>
+
+                    <label for="interest">How did you hear about us?</label>
+                    <textarea id="interest" name="interest"></textarea>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

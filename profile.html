@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/notificationScript.js"></script>
+    <script src="js/login.js" defer></script>
+
+    <title>Talk Blueprint - Debate</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo(0).png" alt="Talk Blueprint Logo" style="width: 50;">
+            Talk Blueprint
+        </div>
+        <div class="search-bar">
+            <label for="search-input" class="visually-hidden">Search</label>
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button id="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="notification-link"><button id="notification-trigger">Notif</button></li>
+                <li id="profile-link"><a href="profile.html">My Profile</a></li>
+                <li><button class="login-trigger">Log In</button></li>
+            </ul>
+        </nav>
+    
+        <!-- Modal for Login and Sign-Up -->
+        <div id="login-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="login-form">
+                    <h1>Login to Your Account</h1>
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button class="login-button">Login</button>
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                </div>
+                <div id="signup-form" style="display: none;">
+                    <h1>Create a New Account</h1>
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button class="signup-button">Sign Up</button>
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+            <!-- Notification Container -->
+        <div class="notification-container" id="notification-container" style="display: none;">
+            <div class="notification-header">
+                <h2>Currently Have no Notifications</h2>
+            </div>
+            <div class="notification-content">
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification-footer">
+                <button class="notification-action-button">Take Action</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="banner-wrapper">
+        <div class="banner">
+            <h1>We Talk Blueprint:<br>Build Conversations from Ground Up</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <aside class="left-column">
+                <div class="menu-column">
+                    <h2>Articles</h2>
+                    <ul>
+                        <li class="dropdown">
+                            <ul class="dropdown-content">
+            <img src="images/kj.jpg" alt="Avatar" class="avatar">
+            <div class="social-buttons">
+                <button>Facebook</button>
+                <button>Others</button>
+            <img src="path/to/avatar.jpg" alt="User Avatar" class="avatar">
+            <h2>John Doe</h2>
+            <p>Email: johndoe@example.com</p>
+            <p>Location: New York, USA</p>
+            <p>Member since: January 2023</p>
+            <button>Edit Profile</button>
+        </div>
+        
+        <div class="activity-summary" id="activity-summary">
+            <h3>Activity Summary</h3>
+            <p>Total Posts: 25</p>
+            <p>Total Comments: 100</p>
+            <button>View Activity</button>
+        </div>
+                </div>
+            </aside>
+        
+            <main class="middle-column">
+                        <div class="post-section user-post-section" id="user-post-section">
+                            <div class="post-header">
+                                <h2>USER NAME</h2>
+                                <textarea placeholder="What's on your mind?" rows="3"></textarea>
+                            </div>
+                            <div class="post-actions">
+                                <label for="file-upload" class="custom-file-upload">
+                                    <i class="fa fa-image"></i> Upload Image
+                                </label>
+                                <input id="file-upload" type="file"/>
+                                <button class="post-button">Post</button>
+                            </div>
+                        </div>
+
+
+            <section class="user-posts">
+                <h2>Your Posts</h2>
+                <div class="post-box">
+                    <h3>Post Title 1</h3>
+                    <p>"Post here"</p>
+                    <button class="post-button">Read More</button>
+                </div>
+                <div class="post-box">
+                    <h3>Post Title 2</h3>
+                    <p>"Post here"</p>
+                    <button class="post-button">Read More</button>
+                </div>
+                <!-- Repeat for more posts -->
+            </section>
+            </main>
+
+            <aside class="right-column">
+                <div class="menu-column">
+                    <h2>Select a Group</h2>
+                    <ul class="group-list">
+                        <li>
+                            <a href="#">Science Enthusiasts</a>
+                            <div class="group-details">
+                                <p>Description: Explore the wonders of science with fellow enthusiasts.</p>
+                                <p>Members: 100+</p>
+                                <button>Join Group</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Tech Innovators</a>
+                            <div class="group-details">
+                                <p>Description: Discuss the latest tech trends and innovations.</p>
+                                <p>Members: 50+</p>
+                                <button>Join Group</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Political Debates</a>
+                            <div class="group-details">
+                                <p>Description: Engage in respectful political discussions and debates.</p>
+                                <p>Members: 200+</p>
+                                <button>Join Group</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Philosophy Discussions</a>
+                            <div class="group-details">
+                                <p>Description: Explore the depths of philosophy and its applications.</p>
+                                <p>Members: 30+</p>
+                                <button>Join Group</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Art Collectors</a>
+                            <div class="group-details">
+                                <p>Description: Share and discuss art collections with fellow enthusiasts.</p>
+                                <p>Members: 20+</p>
+                                <button>Join Group</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>

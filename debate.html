@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/notificationScript.js"></script>
+    <script src="js/login.js" defer></script>          
+    <script src="js/contact.js"></script>
+
+    <title>Talk Blueprint - Debate</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo(0).png" alt="Talk Blueprint Logo" style="width: 50;">
+            Talk Blueprint
+        </div>
+        <div class="search-bar">
+            <label for="search-input" class="visually-hidden">Search</label>
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button id="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="notification-link"><button id="notification-trigger">Notif</button></li>
+                <li id="profile-link"><a href="profile.html">My Profile</a></li>
+                <li><button class="login-trigger">Log In</button></li>
+            </ul>
+        </nav>
+    
+        <!-- Modal for Login and Sign-Up -->
+        <div id="login-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="login-form">
+                    <h1>Login to Your Account</h1>
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button class="login-button">Login</button>
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                </div>
+                <div id="signup-form" style="display: none;">
+                    <h1>Create a New Account</h1>
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button class="signup-button">Sign Up</button>
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+            <!-- Notification Container -->
+        <div class="notification-container" id="notification-container" style="display: none;">
+            <div class="notification-header">
+                <h2>Currently Have no Notifications</h2>
+            </div>
+            <div class="notification-content">
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification-footer">
+                <button class="notification-action-button">Take Action</button>
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="banner-wrapper">
+        <div class="banner">
+            <h1>We Talk Blueprint:<br>Build Conversations from Ground Up</h1>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="column">
+                <aside class="left-column">
+                    <div class="menu-column">
+                        <h2>Articles</h2>
+                        <ul>
+                            <li class="dropdown">
+                                <ul class="dropdown-content">
+                                    <li><a href="#debate1">Science</a></li>
+                                    <li><a href="#debate2">Technology</a></li>
+                                    <li><a href="#debate3">Education</a></li>
+                                    <li><a href="#debate4">Society</a></li>
+                                    <li><a href="#debate5">Economics</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <hr class="menu-divider">
+                        
+                        <h2>Social</h2>
+                        <ul>
+                            <li><a href="newsstand.html">NEWSSTAND</a></li>
+                            <li><a href="messages.html">GROUPS</a></li>
+                            <li id="messages-link"><a href="messages.html">MESSAGES</a></li>
+                        </ul>
+                        <hr class="menu-divider">
+                        <h2>About</h2>
+                        <ul>
+                            <li><a href="who-we-are.html">WHO WE ARE</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <main class="middle-column">
+                    <div class="post-section user-post-section" id="user-post-section">
+                        <div class="post-header">
+                            <h2>USER NAME</h2>
+                            <textarea placeholder="What's on your mind?" rows="3"></textarea>
+                        </div>
+                        <div class="post-actions">
+                            <label for="file-upload" class="custom-file-upload">
+                                <i class="fa fa-image"></i> Upload Image
+                            </label>
+                            <input id="file-upload" type="file"/>
+                            <button class="post-button">Post</button>
+                        </div>
+                    </div>
+
+                    <div class="debate-section">
+                        <div class="debate" id="debate1">
+                            <div class="debate-header">
+                                <img src="images/clove.jpg" alt="User   Avatar" class="user-avatar">
+                                <p class="username">User   Name</p>
+                            </div>
+                            <div class="debate-content">
+                                <p><strong>Debate Topic 1: Climate change and its effects</a></strong></p>
+                                <p><em>Pro-Action on Climate Change Argument:</em> Climate change is an urgent global issue that requires immediate action to mitigate its effects on the environment and future generations.</p>
+                                <p><em>Against Immediate Drastic Action Argument:</em> While climate change is real, drastic action could harm economies and livelihoods, especially in developing countries.</p>
+                                <p><strong>User Debate:</strong> How do you balance economic growth with environmental responsibility? What solutions do you propose?</p>
+                                <div class="image-wrapper">
+                                    <img src="images/science.jpg" alt="debate" class="debate-example">
+                                </div>
+                                <textarea placeholder="How do you balance economic growth with environmental responsibility? What solutions do you propose?" rows="2"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="debate" id="debate2">
+                            <div class="debate-header">
+                                <img src="images/clove.jpg" alt="User  Avatar" class="user-avatar">
+                                <p class="username">User  Name</p>
+                            </div>
+                            <div class="debate-content">
+                                <p><strong>Debate Topic 2: The impact of technology on society</a></strong></p>
+                                <p><em>Pro-Technology Argument:</em> Technology has drastically improved our quality of life by enhancing communication, increasing access to information, and enabling advancements in healthcare.</p>
+                                <p><em>Against-Technology Argument:</em> While technology has its benefits, it has also led to social isolation, mental health issues, and a decline in face-to-face interactions.</p>
+                                <p><strong>User Debate:</strong> What are your thoughts on technology's role in shaping interpersonal relationships? Can we find a balance?</p>                       <div class="image-wrapper">
+                                <img src="images/technology.png" alt="deb ate" class="debate-example">
+                                </div>
+                                <textarea placeholder="What are your thoughts on technology's role in shaping interpersonal relationships? Can we find a balance?" rows="2"></textarea>
+                            </div>
+                        </div>
+                    
+                        <div class="debate" id="debate3">
+                            <div class="debate-header">
+                                <img src="images/clove.jpg" alt="User  Avatar" class="user-avatar">
+                                <p class="username">User  Name</p>
+                            </div>
+                            <div class="debate-content">
+                                <p><strong>Debate Topic 3: The future of education debate-pandemic</a></strong></p>
+                                <p><em>Pro-Remote Learning Argument:</em> The pandemic demonstrated that remote learning can provide flexibility and access to education for students in remote areas.</p>
+                                <p><em>Against-Remote Learning Argument:</em> Remote learning cannot fully replace the benefits of in-person interactions, hands-on learning, and social development.</p>
+                                <p><strong>User Debate:</strong> What do you think is the future of education? Should remote learning be a permanent option?</p>
+                                <div class="image-wrapper">
+                                    <img src="images/education.png" alt="debate" class="debate-example">
+                                </div>
+                                <textarea placeholder="What do you think is the future of education? Should remote learning be a permanent option?" rows="2"></textarea>
+                            </div>
+                        </div>
+                    
+                        <div class="debate" id="debate4">
+                            <div class="debate-header">
+                                <img src="images/clove.jpg" alt="User  Avatar" class="user-avatar">
+                                <p class="username">User  Name</p>
+                            </div>
+                            <div class="debate-content">
+                                <p><strong>Debate Topic 4: Should social media be regulated?</a></strong></p>
+                                <p><em>Pro-Regulation Argument:</em> Social media platforms should be regulated to protect users from misinformation, harassment, and data privacy violations.</p>
+                                <p><em>Against-Regulation Argument:</em> Regulating social media could lead to censorship and limit freedom of expression, stifling open dialogue.</p>
+                                <p><strong>User Debate:</strong> How can we ensure that social media remains a platform for free speech while also protecting users?</p>
+                                <div class="image-wrapper">
+                                    <img src="images/society.jpg" alt="debate" class="debate-example">
+                                </div>
+                                <textarea placeholder="How can we ensure that social media remains a platform for free speech while also protecting users?" rows="2"></textarea>
+                            </div>
+                        </div>
+                    
+                        <div class="debate" id="debate5">
+                            <div class="debate-header">
+                                <img src="images/clove.jpg" alt="User  Avatar" class="user-avatar">
+                                <p class="username">User  Name</p>
+                            </div>
+                            <div class="debate-content">
+                                <p><strong>Debate Topic 5: The pros and cons of remote work</a></strong></p>
+                                <p><em>Pro-Remote Work Argument:</em> Remote work offers flexibility, reduces commuting time, and can lead to increased productivity and job satisfaction.</p>
+                                <p><em>Against-Remote Work Argument:</em> While remote work has benefits, it can create feelings of isolation and make collaboration more challenging.</p>
+                                <p><strong>User Debate:</strong> What has been your experience with remote work? Do you believe it's a sustainable long-term solution?</p>
+                                <div class="image-wrapper">
+                                    <img src="images/economics.jpg" alt="debate" class="debate-example">
+                                </div>
+                                <textarea placeholder="What has been your experience with remote work? Do you believe it's a sustainable long-term solution?" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </main>              
+        
+                <aside class="right-column">
+                    <div class="popular-debates">
+                        <h2>Popular Debates</h2>
+                        <div class="debate-item">
+                            <p><strong><a href="debate.html#debate1">Climate Change and Its Effects</a></strong></p>
+                            <p>Climate change presents a critical challenge; balancing urgent action with economic stability is key. Share your views!</p>
+                        </div>
+                    
+                        <div class="debate-item">
+                            <p><strong><a href="debate.html#debate2">The Impact of Technology on Society</a></strong></p>
+                            <p>Technology has transformed our lives, but it raises questions about social interaction and mental health. What is your perspective?</p>
+                        </div>
+                    
+                        <div class="debate-item">
+                            <p><strong><a href="debate.html#debate3">The Future of Education Post-Pandemic</a></strong></p>
+                            <p>The pandemic has reshaped education, highlighting both the benefits and drawbacks of remote learning. What’s your take?</p>
+                        </div>
+                        
+                        <div class="debate-item">
+                            <p><strong><a href="debate.html#debate4">Should Social Media Be Regulated?</a></strong></p>
+                            <p>Social media platforms play a significant role in society, but should they be regulated to prevent misinformation and protect users?</p>
+                        </div>
+                        
+                        <div class="debate-item">
+                            <p><strong><a href="debate.html#debate5">The Pros and Cons of Remote Work</a></strong></p>
+                            <p>Remote work offers flexibility and productivity, but it can also lead to feelings of isolation. What has been your experience?</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+    </div>
+</body>
+</html>

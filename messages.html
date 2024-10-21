@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/notificationScript.js"></script>
+    <script src="js/login.js" defer></script>
+    <title>Talk Blueprint - Social</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo(0).png" alt="Talk Blueprint Logo" style="width: 50;">
+            Talk Blueprint
+        </div>
+        <div class="search-bar">
+            <label for="search-input" class="visually-hidden">Search</label>
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button id="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="notification-link"><button id="notification-trigger">Notif</button></li>
+                <li id="profile-link"><a href="profile.html">My Profile</a></li>
+                <li><button class="login-trigger">Log In</button></li>
+            </ul>
+        </nav>
+    
+        <!-- Modal for Login and Sign-Up -->
+        <div id="login-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="login-form">
+                    <h1>Login to Your Account</h1>
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button class="login-button">Login</button>
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                </div>
+                <div id="signup-form" style="display: none;">
+                    <h1>Create a New Account</h1>
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button class="signup-button">Sign Up</button>
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Container -->
+        <div class="notification-container" id="notification-container" style="display: none;">
+            <div class="notification-header">
+                <h2>Currently Have no Notifications</h2>
+            </div>
+            <div class="notification-content">
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification-footer">
+                <button class="notification-action-button">Take Action</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner-wrapper">
+        <div class="banner">
+            <h1>We Talk Blueprint:<br>Build Conversations from Ground Up</h1>
+        </div>
+    </div>
+    <div class="container">
+    <div class="column">
+    <main class="middle-column">
+        <h2>Your Conversations</h2>
+        <ul class="messages-list">
+            
+        </ul>
+
+        <div class="chat-box" role="region" aria-label="Chat Box">
+            <div class="header">Chat with <span id="chat-contact-name">Select a contact</span></div>
+            <div class="messages" role="log">
+                <p><strong>Contact:</strong> <span id="contact-message">Select a contact to start chatting.</span></p>
+            </div>
+            <div class="input">
+                <label for="message-input" class="visually-hidden">Type a message...</label>
+                <input type="text" id="message-input" placeholder="Type a message..." />
+                <button aria-label="Send Message">Send</button>
+            </div>
+        </div>    
+    </main>
+
+
+        <aside class="left-column">
+            <div class="menu-column">
+                <h3>Contacts</h3>
+                <ul>
+                    <li>
+                        <img src="images/contact1.jpg" alt="Contact 1" class="contact-image">
+                        <a href="#" class="contact" data-name="Contact 1" data-message="Hi, how are you?">Contact 1</a>
+                        <p>Hi, how are you?</p>
+                    </li>
+                    <li>
+                        <img src="images/contact2.jpg" alt="Contact 2" class="contact-image">
+                        <a href="#" class="contact" data-name="Contact 2" data-message="What are you up to?">Contact 2</a>
+                        <p>What are you up to?</p>
+                    </li>
+                    <li>
+                        <img src="images/contact3.jpg" alt="Contact 3" class="contact-image">
+                        <a href="#" class="contact" data-name="Contact 3" data-message="Long time no see!">Contact 3</a>
+                        <p>Long time no see!</p>
+                    </li>
+                    <li>
+                        <img src="images/contact4.jpg" alt="Contact 4" class="contact-image">
+                        <a href="#" class="contact" data-name="Contact 4" data-message="Let's catch up soon!">Contact 4</a>
+                        <p>Let's catch up soon!</p>
+                    </li>
+                    <li>
+                        <img src="images/contact5.jpg" alt="Contact 5" class="contact-image">
+                        <a href="#" class="contact" data-name="Contact 5" data-message="Are you free this weekend?">Contact 5</a>
+                        <p>Are you free this weekend?</p>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <aside class="right-column">
+            <div class="menu-column">
+                <h2>Select a Group</h2>
+                <ul class="group-list">
+                    <li>
+                        <a href="#">Science Enthusiasts</a>
+                        <div class="group-details">
+                            <p>Description: Explore the wonders of science with fellow enthusiasts.</p>
+                            <p>Members: 100+</p>
+                            <button>Join Group</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Tech Innovators</a>
+                        <div class="group-details">
+                            <p>Description: Discuss the latest tech trends and innovations.</p>
+                            <p>Members: 50+</p>
+                            <button>Join Group</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Political Debates</a>
+                        <div class="group-details">
+                            <p>Description: Engage in respectful political discussions and debates.</p>
+                            <p>Members: 200+</p>
+                            <button>Join Group</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Philosophy Discussions</a>
+                        <div class="group-details">
+                            <p>Description: Explore the depths of philosophy and its applications.</p>
+                            <p>Members: 30+</p>
+                            <button>Join Group</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Art Collectors</a>
+                        <div class="group-details">
+                            <p>Description: Share and discuss art collections with fellow enthusiasts.</p>
+                            <p>Members: 20+</p>
+                            <button>Join Group</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 We Talk Blueprint</p>
+    </footer>
+</body>
+</html>

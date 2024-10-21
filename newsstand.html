@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/notificationScript.js"></script>
+    <script src="js/login.js" defer></script>
+
+    <title>Talk Blueprint - Debate</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo(0).png" alt="Talk Blueprint Logo" style="width: 50;">
+            Talk Blueprint
+        </div>
+        <div class="search-bar">
+            <label for="search-input" class="visually-hidden">Search</label>
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button id="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="notification-link"><button id="notification-trigger">Notif</button></li>
+                <li id="profile-link"><a href="profile.html">My Profile</a></li>
+                <li><button class="login-trigger">Log In</button></li>
+            </ul>
+        </nav>
+    
+        <!-- Modal for Login and Sign-Up -->
+        <div id="login-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="login-form">
+                    <h1>Login to Your Account</h1>
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button class="login-button">Login</button>
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                </div>
+                <div id="signup-form" style="display: none;">
+                    <h1>Create a New Account</h1>
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button class="signup-button">Sign Up</button>
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+            <!-- Notification Container -->
+        <div class="notification-container" id="notification-container" style="display: none;">
+            <div class="notification-header">
+                <h2>Currently Have no Notifications</h2>
+            </div>
+            <div class="notification-content">
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification-footer">
+                <button class="notification-action-button">Take Action</button>
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="banner-wrapper">
+        <div class="banner">
+            <h1>We Talk Blueprint:<br>Build Conversations from Ground Up</h1>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="column">
+                <aside class="left-column">
+                    <div class="menu-column">
+                        <h2>Articles</h2>
+                        <ul>
+                            <li class="dropdown">
+                                <ul class="dropdown-content">
+                                    <li><a href="#debate1">Science</a></li>
+                                    <li><a href="#debate2">Technology</a></li>
+                                    <li><a href="#debate3">Education</a></li>
+                                    <li><a href="#debate4">Society</a></li>
+                                    <li><a href="#debate5">Economics</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <hr class="menu-divider">
+                        <h2>Social</h2>
+                        <ul>
+                            <li><a href="messages.html">GROUPS</a></li>
+                            <li id="messages-link"><a href="messages.html">MESSAGES</a></li>
+                        </ul>
+                        <hr class="menu-divider">
+                        <h2>About</h2>
+                        <ul>
+                            <li><a href="who-we-are.html">WHO WE ARE</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <main class="middle-column">
+                    <ul class="article-list">
+                        <li>
+                            <h3><a href="https://www.noaa.gov/education/resource-collections/climate/climate-change-impacts">Climate Change Impacts</a></h3>
+                            <p>Explore how climate change is affecting ecosystems and human life today.</p>
+                        </li>
+                        <li>
+                            <h3><a href="https://www.geeksforgeeks.org/impact-of-technology-on-society/">Impact of Technology on Society</a></h3>
+                            <p>Discover how technology is shaping social interactions and societal norms.</p>
+                        </li>
+                        <li>
+                            <h3><a href="https://cavite.lpu.edu.ph/academics/undergraduate-colleges/nursing/con-news-and-events/challenges-in-the-midst-of-pandemic-online-learning-experiences-response-during-the-covid-19-pandemic-of-first-year-bsn-learners/">Challenges in Online Learning During COVID-19</a></h3>
+                            <p>Insights into the experiences of first-year nursing learners during the pandemic.</p>
+                        </li>
+                        <li>
+                            <h3><a href="https://www.theartofcoachingvolleyball.com/the-pros-and-cons-of-regulating-social-media/">Pros and Cons of Regulating Social Media</a></h3>
+                            <p>An analysis of the implications of social media regulation.</p>
+                        </li>
+                        <li>
+                            <h3><a href="https://www.groovytek.com/tekfun/working-remotely-pros-cons">Working Remotely: Pros and Cons</a></h3>
+                            <p>A look at the advantages and disadvantages of remote work.</p>
+                        </li>
+                    </ul>
+    
+                </main>              
+        
+                <aside class="right-column">
+
+                </aside>
+            </div>
+    </div>
+</body>
+</html>

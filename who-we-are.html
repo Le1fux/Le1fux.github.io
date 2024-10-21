@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/notificationScript.js"></script>
+    <script src="js/login.js" defer></script>
+    <title>Talk Blueprint</title>
+</head>
+<style>
+.footer-content {
+    text-align: center; /* Center the wrapper */
+    bottom: 0;
+    background-color: #4A90E2; /* A calming blue color */
+}
+
+.footer-section {
+    color: white; /* Text color */
+    text-align: left; /* Align text to the left */
+    padding: 50px 20px; /* Padding for top/bottom and left/right */
+    margin: 30px auto 0; /* Center the footer content */
+    font-family: 'Arial', sans-serif; /* Font style */
+    display: inline-block; /* Make the footer an inline-block to center it */
+}
+
+.footer h1 {
+    font-size: 2.5em; /* Larger font size for the header */
+    line-height: 1.2; /* Spacing between lines */
+    margin: 0; /* Remove default margin */
+}
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo(0).png" alt="Talk Blueprint Logo" style="width: 50;">
+            Talk Blueprint
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="notification-link"><button id="notification-trigger">Notif</button></li>
+                <li id="profile-link"><a href="profile.html">My Profile</a></li>
+                <li><button class="login-trigger">Log In</button></li>
+            </ul>
+        </nav>
+    
+        <!-- Modal for Login and Sign-Up -->
+        <div id="login-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="login-form">
+                    <h1>Login to Your Account</h1>
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button class="login-button">Login</button>
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                </div>
+                <div id="signup-form" style="display: none;">
+                    <h1>Create a New Account</h1>
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button class="signup-button">Sign Up</button>
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notification Container -->
+        <div class="notification-container" id="notification-container" style="display: none;">
+            <div class="notification-header">
+                <h2>Currently Have no Notifications</h2>
+            </div>
+            <div class="notification-content">
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification-banner">
+                <button class="notification-action-button">Take Action</button>
+            </div>
+        </div>
+
+    </div>
+    </header>
+
+    <div class="banner-wrapper">
+        <div class="banner">
+            <h1>We Talk Blueprint:<br>Build Conversations from Ground Up</h1>
+        </div>
+        <div class="container">
+            <div class="column">
+                <aside class="left-column">
+                    <div class="menu-column">
+                        <h2>Who We Are</h2>
+                        <p>
+                            Welcome to Talk Blueprint! We are a community-driven platform designed to foster meaningful conversations and debates. 
+                            Our goal is to provide a space where individuals from diverse backgrounds can come together to discuss ideas, share knowledge, 
+                            and explore topics that matter. Whether you're here to join a group, start a debate, or simply read the latest news, Talk Blueprint 
+                            is your go-to hub for building connections and making your voice heard.
+                        </p>
+                    </div>
+
+                </aside>
+                
+            <main class="middle-column">
+                <h1>
+                <p>i am Leif Levinson C. Basilio,</p> 
+                <p>the main developer of Talk Blueprint</p>
+                </h1>
+            </main>              
+        
+            <aside class="right-column">
+                <p>
+                    At the heart of our platform are our users, who contribute their unique perspectives and insights to create a vibrant and inclusive environment. 
+                    We believe that every conversation has the power to shape the world, and with Talk Blueprint, you can be a part of that change. Join us as 
+                    we talk, share, and build from the ground up.
+                </p>
+                <h2>Our Vision</h2>
+                <p>
+                    Our vision is to be the blueprint for meaningful digital conversations, where people can engage in respectful, constructive discussions on a 
+                    wide range of topics, from the latest in technology and science to cultural and societal issues. We want to empower every individual to share 
+                    their voice and connect with others, fostering understanding and growth through dialogue.
+                </p>
+            </aside>
+</body>
+</html>
